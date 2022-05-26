@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutróloga</title>
+</head>
+
+<body>
+
+    Peso da criança de 5 anos: <input id="iptCrianca" type="text"> <br>
+    <button onclick="avaliar()">Avaliar Peso</button> <br><br>
+
+    <div id="frase"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function avaliar() {
+        var crianca = iptCrianca.value
+
+        if (crianca <= 13.5) {
+            frase.innerHTML = `Abaixo do peso`;
+        } else if (crianca > 21.2) {
+            frase.innerHTML = `Acima do peso`;
+        } else if (crianca == 18.3) {
+            frase.innerHTML = `Peso perfeito`;
+        } else if (crianca >= 13.5 && crianca <= 21.2) {
+            frase.innerHTML = `Peso na média`;
+        } 
+    }
+
+
+</script>

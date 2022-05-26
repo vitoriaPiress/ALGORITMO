@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervalos</title>
+</head>
+
+<body>
+
+    <h1>Contagem de números</h1>
+
+    Entre com o inferior: <input id="valInf" type="number"> <br><br>
+
+    Entre com o superior: <input id="valSup" type="number"> <br><br>
+
+    <button onclick="contar()">Iniciar contagem</button> <br><br>
+
+    <div id="msg"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function contar() {
+
+        msg.innerHTML = ``;
+
+        var inferior = Number(valInf.value);
+
+        var superior = Number(valSup.value);
+
+        // var contador = inferior;
+
+        
+
+            while (inferior <= superior) {
+
+                if ((inferior % 2) == 0) {
+
+                msg.innerHTML += `${inferior} <br>`;
+                
+                    
+            }
+
+            inferior++;
+
+        }
+
+
+
+    }
+
+
+
+
+</script>

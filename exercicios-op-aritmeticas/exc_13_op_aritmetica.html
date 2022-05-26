@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+
+<body>
+
+    Insira o valor Bruto do seu Salário:
+    <input id="valorSalario" type="text"> <br>
+    <button onclick="calcDesc()">Calcular Descontos</button> <br><br>
+
+    <span id="result"></span>
+
+
+
+</body>
+<!--
+
+    Atalhos matemáticos = 
+
+    ax_nota = ax_nota + 7;
+
+    Encurtando:
+
+    ax_nota +=7;
+
+    ax_nota++; (somando 1, simples)
+
+-->
+</html>
+
+<script>
+    function calcDesc() {
+
+        var salarioBruto = Number(valorSalario.value);
+        var inss = salarioBruto * 0.1;
+        var ir = salarioBruto * 0.2;
+        var is = salarioBruto / 30;
+
+        result.innerHTML = `<span style="color: blue;">Apesar de seu bruto ser <b style="color: green;"> R$ ${Number(valorSalario.value).toFixed(2)}</b> após os descontos você receberá somente <b style="color: red;"> R$
+         ${(salarioBruto - inss - is).toFixed(2)}</b> </span>`;
+
+    }
+
+
+</script>

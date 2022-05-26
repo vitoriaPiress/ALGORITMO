@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Quantos chocolates foram adquiridos?<input id="valChoco" type="text"> <br>
+    <button onclick="calculo()">Compra</button>
+
+</body>
+
+</html>
+
+<script>
+    function calculo() {
+        var qtdChoco = Number(valChoco.value);
+        var promo = qtdChoco * 2.50;
+        var semPromo = qtdChoco * 3.00;
+
+        if (qtdChoco > 12) {
+            alert(`O valor da sua compra foi de R$${promo.toFixed(2)}`);
+        } else {
+            alert(`O valor da sua compra foi de R$${semPromo.toFixed(2)}`);
+        }
+    }
+</script>

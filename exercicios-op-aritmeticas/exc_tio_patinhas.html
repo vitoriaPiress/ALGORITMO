@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    
+    <span style="color: blue;">Total guardado no cofrinho: R$ <u id="totalCofrinho">0.00</u></span> <br><br>
+
+    <span style="color: blue;">Depósitos efetuados: <u id="totalDeposito">0</u></span> <br><br>
+
+    <!--<button onclick="dep50()">Depositar 0,50</button> -->
+    
+    <img onclick="dep50()" style="width: 100px;" src="https://images.tcdn.com.br/img/img_prod/726147/moeda_brasil_50_centavos_1998_mbc_911_1_a57ee6f6c25037f2429dccae9cf204c5.png" alt="">
+
+    <!-- <button onclick="dep2()">Depositar 2,00</button> -->
+
+    <img onclick="dep2()" style="width: 100px;" src="https://upload.wikimedia.org/wikipedia/pt/1/1e/Anverso_da_c%C3%A9dula_de_dois_reais.PNG" alt="">
+
+    <button onclick="zerar()">Zerar Informações</button>
+
+
+
+
+
+
+</body>
+</html>
+
+<script>
+
+    var qtdCofre = 0
+    var qtdDeposito = 0
+
+    function dep50() {
+        qtdCofre = qtdCofre + 0.50;
+        totalCofrinho.innerHTML = qtdCofre.toFixed(2);
+        totalDeposito.innerHTML = qtdDeposito ++;
+    }
+
+    function dep2() {
+        qtdCofre = qtdCofre + 2.00;
+        totalCofrinho.innerHTML = qtdCofre.toFixed(2);
+        totalDeposito.innerHTML = qtdDeposito ++;
+    }
+
+    function zerar() {
+        qtdCofre = 0;
+        qtdDeposito = 0;
+        totalCofrinho.innerHTML = qtdCofre.toFixed(2);
+        totalDeposito.innerHTML = qtdDeposito.toFixed(2);
+    }
+</script>

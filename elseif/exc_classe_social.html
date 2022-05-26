@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe Social</title>
+</head>
+
+<body>
+
+    digite a renda familiar mensal: <input id="iptRenda" type="text"> <br>
+    <button onclick="analise()">Analisar Renda</button> <br><br>
+
+    <div id="frase"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function analise() {
+        var renda = iptRenda.value
+
+        if (renda <= 250) {
+            frase.innerHTML = `Classe E`;
+        } else if (renda > 250 && renda <= 900) {
+            frase.innerHTML = `Classe D`;
+        } else if (renda > 900 && renda <= 2500) {
+            frase.innerHTML = `Classe C`;
+        } else if (renda > 2500 && renda <= 9500) {
+            frase.innerHTML = `Classe B`;
+        }else{
+            frase.innerHTML = `Classe A`;
+        }
+    }
+
+</script>

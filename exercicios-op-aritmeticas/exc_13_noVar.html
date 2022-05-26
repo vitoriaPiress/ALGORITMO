@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+
+<body>
+
+    Insira o valor Bruto do seu Salário:
+    <input id="valorSalario" type="text"> <br>
+    <button onclick="calcDesc()">Calcular Descontos</button> <br><br>
+
+    <span id="result"></span>
+
+
+</body>
+
+</html>
+
+<script>
+
+    // TAB quando cria a função, depois do nome ela seleciona automaticamente o parameters e com isso eh possivel apagar facilmente ela
+    
+
+    function calcDesc() {
+
+        result.innerHTML = `<span style="color: blue;">Apesar de seu bruto ser <b style="color: green;"> R$ ${Number(valorSalario.value).toFixed(2)}</b> após os descontos você receberá somente <b style="color: red;"> R$
+         ${((Number(valorSalario.value)) - (Number(valorSalario.value) * 0.1) - (Number(valorSalario.value) * 0.2) - (Number(valorSalario.value) / 30)).toFixed(2)}</b> </span>`;
+
+    }
+
+
+
+</script>

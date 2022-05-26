@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases</title>
+</head>
+
+<body>
+
+    <h3>Paraguaio</h3>
+
+    Insira um número: <input id="iptNumero" type="text"> <br><br>
+
+    Digite uma frase: <input id="iptFrase" type="text"> <br><br>
+
+    <button onclick="exibir()">Paraguaio</button> <br><br>
+
+   
+
+</body>
+
+</html>
+
+<script>
+
+    function exibir() {
+        
+        var numero = Number(iptNumero.value);
+
+        var frase = iptFrase.value;
+
+        var contador = 0;
+
+       
+
+        while (contador < numero) {
+            
+            alert(`${frase}`);
+
+        
+            contador ++;
+        
+        }
+
+    }
+
+</script>

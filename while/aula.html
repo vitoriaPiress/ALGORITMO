@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de repetição</title>
+</head>
+
+<body>
+
+    <h2>O amor é lindo</h2>
+
+    diga o quanto vc gosta da sua mãe (0-10)
+    <input id="iptQtd" type="range" min="0" max="10"> <br><br>
+
+    <button onclick="repetir()">O amor é lindo</button> <br> <br>
+
+    <div id="msg"></div>
+
+</body>
+
+</html>
+
+<script>
+
+
+
+    function repetir() {
+
+        var contador = 0;
+
+        var qtd = iptQtd.value
+
+        msg.innerHTML = ``;
+
+        while (contador < qtd) {
+
+            msg.innerHTML += `Mamãe você é a melhor mulher do mundo! <br>`;
+            contador++;
+
+        }
+
+    }
+
+</script>

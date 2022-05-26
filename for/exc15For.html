@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR</title>
+</head>
+
+<body>
+
+    Quantos depositos foram feitos: <input id="quantidade_deposito" type="text"> <br><br>
+
+    Valor de cada depósito: <input id="valor_deposito" type="text"> <br><br>
+
+    <button onclick="mostrar()">Acompanhar Grana</button> <br><br>
+
+    <div id="msg"></div>
+
+</body>
+
+</html>
+
+<script>
+
+
+    function mostrar() {
+
+        msg.innerHTML = ``;
+
+        var deposito = Number(quantidade_deposito.value)
+
+        var valor = Number(valor_deposito.value)
+
+        
+
+
+        for (var contador = 1; contador <= deposito; contador++) {
+
+            if (contador % 3 == 0) {
+
+                msg.innerHTML += `${contador}º Mês: R$ ${valor.toFixed(2)} <br>`;
+
+                valor = valor + Number(quantidade_deposito.value);
+                valor = valor * 1.01;
+
+                
+                
+            } else {
+
+                msg.innerHTML += `${contador}º Mês: R$ ${valor.toFixed(2)} <br>`;
+
+                valor = valor + Number(quantidade_deposito.value);
+
+            }
+
+            
+
+        }
+
+    }
+
+
+
+</script>

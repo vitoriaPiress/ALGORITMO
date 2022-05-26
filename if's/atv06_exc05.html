@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzarini</title>
+</head>
+
+<body>
+
+    Quantos kWh você consome por dia? <input id="valKwh" placeholder="Digite aqui..." type="text"> <br>
+    <button onclick="calc()">Calcular conta de luz</button>
+
+</body>
+
+</html>
+
+<script>
+    function calc() {
+        var consumo = Number(valKwh.value);
+        var consumoMes = consumo * 30;
+        var conta = consumoMes * 0.85;
+
+        if (consumoMes < 100) {
+          var desconto = conta * 0.90;
+          alert(`O valor da conta a ser paga é R$ ${desconto.toFixed(2)}, com 10% de desconto!`);
+            
+        }
+        else{
+            alert(`O valor da conta a ser paga é R$${conta.toFixed(2)}`);
+        }
+        
+        
+    }
+
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h4>Insira um filme que voce goste</h4>
+
+    <input id="iptFilme" type="text" placeholder="Digite aqui.."> <button onclick="cadastrar()">Cadastrar</button><br><br> 
+
+    <div id="msg"></div>
+
+    <span style="color: blue;"></span>
+
+</body>
+
+</html>
+
+<script>
+
+    var vtFilmes = [];
+
+    function cadastrar() {
+
+        vtFilmes.push(iptFilme.value);
+        iptFilme.value = '';
+
+        if (vtFilmes.length%2 == 0) {
+
+            msg.innerHTML += `<span style="color: blue;">${vtFilmes[vtFilmes.length - 1]}</span><br>`;
+            
+        }
+
+        if (vtFilmes.length%2 == 1) {
+
+            msg.innerHTML += `<span style="color: red;">${vtFilmes[vtFilmes.length - 1]}</span><br>`;
+            
+        }
+        
+
+        
+    }
+
+    
+</script>

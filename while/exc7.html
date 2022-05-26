@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos de 5</title>
+</head>
+
+<body>
+
+    <h2>Óias os murtiplo ai</h2>
+
+    Escolha um número (tem que ser de 20 a 100): <input id="numero" type="text"> <br>
+    <button onclick="exibir()">Adoro múltiplos de 5</button> <br><br>
+
+    <div id="msg"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function exibir() {
+
+        var num = Number(numero.value)
+
+        var contador = 0;
+
+        msg.innerHTML = ``;
+        
+        while (contador <= num) {
+
+            
+
+            if ((contador%5) == 0) {
+
+                msg.innerHTML += `${contador} <br>`;
+                
+            }
+
+            contador ++
+            
+        }
+
+        
+
+    }
+
+</script>

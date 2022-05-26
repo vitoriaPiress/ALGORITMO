@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Quantas pessoas vão entrar no carro: <input id="quantidade_pessoas" type="text"> <br><br>
+
+    Qual a capacidade do carro: <input id="capacidade_carro" type="text"> <br><br>
+
+    <button onclick="mostrar()">#PartiuCarona</button> <br><br>
+
+    <div id="msg"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function mostrar() {
+
+        msg.innerHTML = ``;
+        
+        var qtdPessoa = Number(quantidade_pessoas.value)
+
+        var capacidade = Number(capacidade_carro.value)
+
+        var contador = 0
+
+        while (contador < qtdPessoa) {
+            
+            contador++
+
+           
+
+            if (contador == 1) {
+                
+                msg.innerHTML += `Entrou o ${contador}º passageiro (que é o(a) motorista) <br>`;
+
+            } 
+            
+            else if (contador > capacidade) {
+                
+                msg.innerHTML += `O ${contador}º passageiro terá que esperar! <br>`;
+
+            } 
+            
+            else {
+
+                msg.innerHTML += `Entrou o ${contador}º passageiro <br>`;
+
+            }
+
+        }
+
+    }
+
+
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Democracia</title>
+</head>
+<body>
+    Digite seu nome: <input id="nomeAluno" type="text"> <br>
+    Aulas totais do curso: <input id="qtdAulas" type="text"> <br>
+    Aulas que você faltou: <input id="qtdFaltas" type="text"> <br>
+    <button onclick="calcular()">Calcular Frequência</button> <br><br>
+
+    <span id="result"></span><br>
+    <div id="barra"></div>
+    <!--
+        tot_fre = tot_aulas - tot_faltas
+
+        %freq = tot_fre / tot_aulas * 100
+
+    -->
+
+
+</body>
+</html>
+<script>
+
+function calcular() {
+
+    var tot_aulas = Number(qtdAulas.value);
+    var tot_faltas = Number(qtdFaltas.value);
+    var tot_fre = tot_aulas - tot_faltas;
+    var fre = tot_fre / tot_aulas * 100;
+    result.innerHTML = `Olá ${nomeAluno.value}! Sua frequência foi de ${fre}%`
+
+}
+
+</script>

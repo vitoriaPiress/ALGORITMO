@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+
+<body>
+
+    <select onchange="especie()" id="selEspecie">
+
+        <option value="msgErro">- Escolha uma espécie -</option>
+        <option value="oviparos">Ovíparos</option>
+        <option value="mamiferos">Mamíferos</option>
+
+    </select> <br><br>
+
+    <div id="divDisplay" style="display: none;">
+
+        <select onchange="oviparos()" style="display: none;" id="selOviparos">
+
+            <option value="msgErro2">- Escolha um ovíparo -</option>
+            <option value="galinha">Galinha</option>
+            <option value="peixe">Peixe</option>
+            <option value="tartaruga">Tartaruga</option>
+
+        </select>
+
+        <select onchange="mamiferos()" style="display: none;" id="selMamiferos">
+
+            <option value="msgErro3">- Escolha um Mamífero</option>
+            <option value="elefante">Elefante</option>
+            <option value="porco">Porco</option>
+            <option value="coelho">Coelho</option>
+
+        </select> <br><br>
+
+        <img id="imgAnimal" src="" style="width: 300px;"> <br><br>
+
+        <div id="calculoAnimalOviparo" style="display: none;">
+
+            Valor de compra do ovíparo: <input id="iptValOviparo" type="text"> <br>
+            <button onclick="calculoOviparo()">Calcular Imposto</button>
+            <button onclick="reiniciarOviparo()">Restart</button>
+
+        </div>
+
+        <div id="calculoAnimalMamifero" style="display: none;">
+
+            Valor de compra do mamífero: <input id="iptValMamifero" type="text"> <br>
+            <button onclick="calculoMamifero()">Calcular Imposto</button>
+            <button onclick="reiniciarMamifero()">Restart</button>
+
+        </div> <br>
+
+        <span id="resultadoImposto"></span>
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    var valTotalImpostos = 0
+
+    function especie() {
+        var tipoEspecie = selEspecie.value
+
+        if (tipoEspecie == 'msgErro') {
+
+            divDisplay.style.display = 'none';
+
+        } else {
+
+            if (tipoEspecie == 'oviparos') {
+
+                divDisplay.style.display = 'block';
+                selOviparos.style.display = 'block';
+                selMamiferos.style.display = 'none';
+
+            }
+
+            else {
+
+                if (tipoEspecie == 'mamiferos') {
+
+                    divDisplay.style.display = 'block';
+                    selMamiferos.style.display = 'block';
+                    selOviparos.style.display = 'none';
+
+                }
+
+
+            }
+
+        }
+    }
+
+    function oviparos() {
+        var tipoOviparo = selOviparos.value;
+
+        if (tipoOviparo == 'msgErro2') {
+
+            imgAnimal.src = '';
+            calculoAnimalOviparo.style.display = 'none';
+            calculoAnimalMamifero.style.display = 'none';
+
+        }
+
+        else {
+
+            if (tipoOviparo == 'galinha') {
+
+                imgAnimal.src = 'https://super.abril.com.br/wp-content/uploads/2022/01/SI_435_ORCL_Galinha-ovo_site.png?quality=90&strip=info&resize=680,453';
+                calculoAnimalOviparo.style.display = 'block';
+                calculoAnimalMamifero.style.display = 'none';
+
+            }
+
+            else {
+
+                if (tipoOviparo == 'peixe') {
+
+                    imgAnimal.src = 'https://oimparcial.com.br/app/uploads/2020/09/05gy4ue5d10polzkrmks4rion.jpg'
+                    calculoAnimalOviparo.style.display = 'block';
+                    calculoAnimalMamifero.style.display = 'none';
+
+                }
+
+                else {
+
+                    if (tipoOviparo == 'tartaruga') {
+
+                        imgAnimal.src = 'https://cdn.diferenca.com/imagens/tartaruga-marinha-cke.jpg'
+                        calculoAnimalOviparo.style.display = 'block';
+                        calculoAnimalMamifero.style.display = 'none';
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    function mamiferos() {
+        var tipoMamifero = selMamiferos.value;
+
+        if (tipoMamifero == 'msgErro3') {
+
+            imgAnimal.src = '';
+            calculoAnimalMamifero.style.display = 'none';
+            calculoAnimalOviparo.style.display = 'none';
+
+        }
+
+        else {
+
+            if (tipoMamifero == 'elefante') {
+
+                imgAnimal.src = 'https://static.preparaenem.com/2022/01/elefante-africano-de-savana-na-pastagem.jpg';
+                calculoAnimalMamifero.style.display = 'block';
+                calculoAnimalOviparo.style.display = 'none';
+
+            }
+
+            else {
+
+                if (tipoMamifero == 'porco') {
+
+                    imgAnimal.src = 'https://super.abril.com.br/wp-content/uploads/2021/05/porquinho_site.jpg?quality=90&strip=info&resize=680,453';
+                    calculoAnimalMamifero.style.display = 'block';
+                    calculoAnimalOviparo.style.display = 'none';
+
+                }
+
+                else {
+
+                    if (tipoMamifero == 'coelho') {
+
+                        imgAnimal.src = 'https://blog.cobasi.com.br/wp-content/webpc-passthru.php?src=https://blog.cobasi.com.br/wp-content/uploads/2021/01/mini-coelho-capa.png&nocache=1';
+                        calculoAnimalMamifero.style.display = 'block';
+                        calculoAnimalOviparo.style.display = 'none';
+
+                    }
+
+                }
+
+            }
+
+        }
+    }
+
+    function calculoOviparo() {
+
+        var valCompra = Number(iptValOviparo.value);
+        var valImposto = valCompra * 0.05;
+        valTotalImpostos += valImposto;
+        resultadoImposto.innerHTML = `O imposto será de R$ ${valImposto.toFixed(2)}`
+
+    }
+
+    function calculoMamifero() {
+
+        var valCompra = Number(iptValMamifero.value);
+        var valImposto = valCompra * 0.10;
+        valTotalImpostos += valImposto;
+        resultadoImposto.innerHTML = `O imposto será de R$ ${valImposto.toFixed(2)}`
+
+    }
+
+    function reiniciarOviparo() {
+
+        alert(`Valor total de todos os impostos calculados foi de: R$ ${valTotalImpostos.toFixed(2)}`);
+        valTotalImpostos = 0;
+        resultadoImposto.innerHTML = ``;
+        calculoAnimalOviparo.style.display = 'none';
+        calculoAnimalMamifero.style.display = 'none';
+        imgAnimal.src = '';
+        selMamiferos.style.display = 'none';
+        selOviparos.style.display = 'none';
+
+    }
+
+    function reiniciarMamifero() {
+
+        alert(`Valor total de todos os impostos calculados foi de: R$ ${valTotalImpostos.toFixed(2)}`);
+        valTotalImpostos = 0;
+        resultadoImposto.innerHTML = ``;
+        calculoAnimalOviparo.style.display = 'none';
+        calculoAnimalMamifero.style.display = 'none';
+        imgAnimal.src = '';
+        selMamiferos.style.display = 'none';
+        selOviparos.style.display = 'none';
+
+    }
+
+
+</script>

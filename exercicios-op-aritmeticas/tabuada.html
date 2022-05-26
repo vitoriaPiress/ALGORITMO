@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    Qual tabuada você quer saber? <input id="numTab" type="text"> <br>
+    
+    <button onclick="mostrar()">Ver tabuada</button> <br><br>
+
+    <div id="divTab" style="display: none;"> 
+        <span id="n1"></span><br>
+        <span id="n2"></span><br>
+        <span id="n3"></span><br>
+        <span id="n4"></span><br>
+        <span id="n5"></span><br>
+        <span id="n6"></span><br>
+        <span id="n7"></span><br>
+        <span id="n8"></span><br>
+        <span id="n9"></span>
+    
+    </div>
+</body>
+</html>
+
+<script>
+
+
+    function mostrar() {
+        var numUser = Number(numTab.value);
+        divTab.style.display = 'block';
+        n1.innerHTML = `${numUser} x 1 = ${numUser * 1}`;
+        n2.innerHTML = `${numUser} x 2 = ${numUser * 2}`;
+        n3.innerHTML = `${numUser} x 3 = ${numUser * 3}`;
+        n4.innerHTML = `${numUser} x 4 = ${numUser * 4}`;
+        n5.innerHTML = `${numUser} x 5 = ${numUser * 5}`;
+        n6.innerHTML = `${numUser} x 6 = ${numUser * 6}`;
+        n7.innerHTML = `${numUser} x 7 = ${numUser * 7}`;
+        n8.innerHTML = `${numUser} x 8 = ${numUser * 8}`;
+        n9.innerHTML = `${numUser} x 9 = ${numUser * 9}`;
+        
+
+    }
+
+</script>

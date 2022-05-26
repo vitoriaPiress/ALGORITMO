@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sete e oito meu</title>
+</head>
+
+<body>
+
+    <h2 style="font-size: 30px;">Viva o 7</h2>
+
+    Digite um número entre 0 e 200: <input id="iptNumero" type="text"> <br>
+    <button onclick="calcular()">Viva o 7!</button> <br><br>
+
+    <div id="msg"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function calcular() {
+        
+        var num = Number(iptNumero.value)
+
+        var contador = 0;
+
+        msg.innerHTML = ``;
+
+        while (contador <= num) {
+            
+            if ((contador%7 == 0)) {
+                
+                msg.innerHTML += `${contador} <br>`;
+
+            }
+
+            contador ++
+
+        }
+
+    }
+
+</script>

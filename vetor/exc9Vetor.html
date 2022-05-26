@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Registre seus projetos criados aqui ↓</h3>
+
+    <input id="iptProjetos" placeholder="Digite aqui" type="text"> <button onclick="registrar()">Registrar Projeto</button> <button onclick="mostrar()">Mostrar Projetos</button> <br><br>
+
+    <div id="msgExperiencia"></div>
+
+    <div id="msgProjetos"></div>
+
+</body>
+
+</html>
+
+<script>
+    
+    var totProjetos = [];
+
+    function registrar() {
+
+        totProjetos.push(iptProjetos.value);
+
+        iptProjetos.value = '';
+
+        
+        if (totProjetos.length >= 0 && totProjetos.length <= 4) {
+            msgExperiencia.innerHTML=`Você já fez ${totProjetos.length} projetos. Por isso você é um profissional Júnior`;
+        } else
+
+        if (totProjetos.length >= 5 && totProjetos.length <= 12) {
+            msgExperiencia.innerHTML=`Você já fez ${totProjetos.length} projetos. Por isso você é um profissional Pleno desde o projeto 
+            ${totProjetos[4]}`;
+        } else 
+
+        if (totProjetos.length >= 13) {
+            msgExperiencia.innerHTML=`Você já fez ${totProjetos.length} projetos. Por isso você é um profissional Sênior desde o projeto 
+            ${totProjetos[12]}`;
+        }
+        
+
+
+    }
+
+    function mostrar() {
+
+        for (var contador = totProjetos.length - 1; contador >= 0; contador--) {
+            msgProjetos.innerHTML += `<br>${totProjetos[contador]}<br>`;         
+        }
+        
+
+
+    }
+
+
+</script>

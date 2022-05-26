@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Idle</title>
+</head>
+
+<body>
+
+    <button onclick="adicionar()">Clica Neu</button> <br><br>
+
+    <span>Você já clicou <b id="valClick">0</b> vezes</span> <br> <br>
+
+    <div id="frase"></div>
+
+    
+
+</body>
+
+</html>
+
+<script>
+
+    var qtdClick = 0
+
+    function adicionar() {
+        qtdClick ++;
+        valClick.innerHTML = `${qtdClick};`
+
+        if (qtdClick < 5) {
+            frase.innerHTML = `Dedo fraquinho hein!!`;
+        } else {
+
+            if (qtdClick <= 10) {
+                frase.innerHTML = `Dedo bom, mano!`;
+                
+            } else {
+
+                if (qtdClick <= 15) {
+                    frase.innerHTML = `Gosta de clicar, hein!!`;
+                } else {
+                    if (qtdClick > 15) {
+                        frase.innerHTML = `Eita dedo nervoso!!`
+                    }
+                }
+                
+            }
+            
+        }
+    }
+
+
+</script>

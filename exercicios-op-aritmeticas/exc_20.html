@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+     <h1>Playin' With Money</h1>
+
+     Qual o seu salário? <input id="salAtual" type="text"> <br><br>
+
+     <span id="salarioTela"></span> <br><br>
+
+     <button onclick="confirmSal()">Confirmar Salário</button>
+     <button onclick="pgr100()">Pagar conta de 100</button>
+     <button onclick="pgr500()">Pagar conta de 500</button>
+     <button onclick="ganharLoto()">Ganhar 2000 na loteria</button>
+
+
+
+</body>
+</html>
+
+<script>
+
+
+    function confirmSal() {
+        var salInserido = Number(salAtual.value);
+        salarioTela.innerHTML =`Grana atual: R$<span id="totalGrana">${salInserido}</span>`;
+    }
+
+    function pgr100() {
+        var salInserido = Number(salAtual.value);
+        var conta = salInserido - 100;
+        totalGrana.innerHTML = conta ;
+    }
+    
+    function pgr500() {
+        var salInserido = Number(salAtual.value);
+        var conta = salInserido - 500;
+        totalGrana.innerHTML = conta;
+    }
+
+    function ganharLoto() {
+        var salInserido = Number(salAtual.value);
+        var conta = salInserido + 2000
+        totalGrana.innerHTML = conta;
+    }
+
+
+
+</script>

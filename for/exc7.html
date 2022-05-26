@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100</title>
+</head>
+
+<body>
+
+    Digite um número de 5 até 99<input id="numeroUsuario" type="text"> <br><br>
+    <button onclick="contar()">Contar</button> <br><br>
+
+    <div id="msg"></div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function contar() {
+
+        msg.innerHTML = ``;
+
+        var numero = Number(numeroUsuario.value)
+        
+        if (numero > 5 && numero < 100) {
+        
+            for (var contador = 5; contador <= numero; contador++) {
+                
+                msg.innerHTML += `${contador} <br>`;
+
+            }
+
+    } else {
+
+        alert(`Número inválido`);
+
+    }
+
+    }
+
+    
+
+
+</script>

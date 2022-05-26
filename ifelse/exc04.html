@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ala</title>
+</head>
+
+<body>
+    Digite sua frequencia: <input id="valFreq" type="text"> <br>
+    <button onclick="analise()">Analisar Frequencia</button> <br><br>
+
+    <img style="width: 300px;" id="aluno" src="" alt="">
+
+</body>
+
+</html>
+
+<script>
+
+function analise() {
+    var frequencia = valFreq.value;
+    if (frequencia < 50) {
+        aluno.src = 'https://cdn.radiojotafm.com.br/img/c/300/300/dn_arquivo/2021/06/dia-turista-c.jpg';
+    } else {
+        aluno.src = 'https://cdn.w600.comps.canstockphoto.com.br/estudioso-homework-aluno-banco-de-imagem_csp26353866.jpg'
+    }
+}
+
+
+</script>

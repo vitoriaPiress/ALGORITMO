@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+
+<body>
+
+    Digite seu Peso:
+    <input id="peso" type="text"> <br><br>
+
+    Digite sua Altura:
+    <input id="altura" type="text"> <br><br>
+
+    <button onclick="imcHomem()">IMC Homem</button> <button onclick="imcMulher()">IMC Mulher</button> <br><br>
+
+    <span id="result"></span>
+
+
+</body>
+
+</html>
+
+<script>
+
+
+
+    function imcHomem() {
+
+        var valPeso = Number(peso.value);
+        var valAltura = Number(altura.value);
+        var imc = valPeso / (valAltura * valAltura);
+
+        result.innerHTML = `Seu IMC é ${imc.toFixed(1)} kg/m2`;
+
+    }
+
+    function imcMulher() {
+
+        var valPeso = Number(peso.value);
+        var valAltura = Number(altura.value);
+        var imc = valPeso / (valAltura * valAltura);
+        var imcMoca = (valPeso / (valAltura * valAltura)) * 0.9;
+
+        result.innerHTML = `Seu IMC é ${imcMoca.toFixed(1)} kg/m2`;
+
+    }
+
+
+
+</script>

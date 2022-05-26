@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+
+
+
+<body>
+
+    Insira sua nota da Avaliação Continuada:
+    <input id="ac" type="text"> <br><br>
+
+    Insira sua nota da Avaliação Semestral:
+    <input id="as" type="text"> <br><br>
+
+    Insira seu nome:
+    <input id="nomeAluno" type="text"> <br>
+
+    <button onclick="calcMedia()">Calcular Média</button> <br><br>
+
+    <span id="result"></span>
+
+
+
+
+</body>
+
+</html>
+
+<script>
+
+    // ctrl + : = comentar todas as linhas selecionadas
+    //toFixed(2) = adiciona casas decimais no valor. Use apenas no final onde mostrará o resultado
+
+
+    function calcMedia() {
+
+        
+
+        var notaAC = Number(ac.value);
+
+        var notaAS = Number(as.value);
+
+        var notaMedia = notaAC * 0.4 + notaAS * 0.6;
+
+        result.innerHTML = `A média de ${nomeAluno.value} será de ${notaMedia.toFixed(1)}`
+
+    }
+
+</script>

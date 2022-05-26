@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevator</title>
+</head>
+
+<body>
+
+    Quantidade de homens no elevador: <input id="valHome" type="text"> <br>
+    Quantidade de mulheres no elevador: <input id="valMulhe" type="text"> <br>
+    <button onclick="calculo()">Ligar Elevador</button> <br><br>
+
+    <div id="frase"></div>
+
+    
+
+</body>
+
+</html>
+
+
+<script>
+    
+    function calculo() {
+        var qtdHomem = Number(valHome.value);
+        var qtdMulher = Number(valMulhe.value);
+        var pesoHomem = qtdHomem * 90;
+        var pesoMulher = qtdMulher * 70;
+        var pesoTot = pesoHomem + pesoMulher;
+
+        if (pesoTot < 500) {
+            frase.style.color = 'green'
+            frase.innerHTML = `Elevador vai se mover, pois está com ${pesoTot} kg`
+        } else {
+            frase.style.color = 'red'
+            frase.innerHTML = `Alguém precisa descer. Precisa perder ${pesoTot - 499} kg para mover o elevador`
+            
+        }
+    }
+
+
+</script>

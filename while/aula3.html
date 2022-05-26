@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetição</title>
+</head>
+
+<body>
+
+    <h1>Contagem de números</h1>
+
+    Entre com o limite superior a 5: <input onkeyup="contar()" id="valUser" type="text">
+
+    <!-- <button onclick="contar()">Iniciar contagem</button> <br><br> -->
+
+    <div id="msg"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function contar() {
+
+        msg.innerHTML = ``;
+
+        var valUsuario = valUser.value
+
+        var contador = 5;
+
+        // var qtdNumero = 0;    
+
+        while (contador <= valUsuario) {
+
+            
+            // qtdNumero++;
+            msg.innerHTML += `${contador} <br>`;
+            contador ++;
+            
+        }
+
+    }
+
+
+
+
+</script>

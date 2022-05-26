@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentira</title>
+</head>
+
+<body>
+
+    Quantas latinhas de refrigerante você toma por dia? <input id="qtdRefri" placeholder="Digite aqui..." type="text"> <br>
+    <button onclick="calculo()">Quantos refris?</button> <br><br>
+
+    <span id="result"></span>
+</body>
+
+</html>
+
+<script>
+
+    
+
+    function calculo() {
+        var refris = 0
+        var qtdRefris = Number(qtdRefri.value)
+        refris = qtdRefris * 365;
+        if (refris >= 500) {
+           
+            result.innerHTML = `CUIDADO com a diabetes, você toma ${refris} latinhas por ano.`;
+        }
+        if (refris < 500) {
+
+        result.innerHTML = `Você toma ${refris} latinhas por ano.`;
+        }
+        
+    }
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraguaio</title>
+</head>
+
+<body>
+
+    digite um numero: <input id="userNumber" type="text"> <br><br>
+    digite uma frase: <input id="userFrase" type="text"> <br><br>
+
+    <div id="msg"></div>
+
+    <button onclick="repetir()">Papagaio</button>
+
+</body>
+
+</html>
+
+<script>
+
+    function repetir() {
+
+        var numero = Number(userNumber.value)
+
+        var frase = userFrase.value
+        
+        for (var contador = 1; contador <= numero; contador++) {
+            alert(`${frase}`);
+        }
+
+    }
+
+
+</script>

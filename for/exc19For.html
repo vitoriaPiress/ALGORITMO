@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idades</title>
+</head>
+
+<body>
+
+    Insira sua idade: <input id="idadeUsuario" type="text" onkeyup="exibir()"> <br><br>
+
+    <div id="msg"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function exibir() {
+
+        msg.innerHTML = ``;
+
+        var idade = idadeUsuario.value
+        
+        for (var contador = 0; contador <= idade; contador++) {
+            
+            if (contador >= 0 && contador <= 4) {
+
+                msg.innerHTML += `${contador} anos (Primeira Infância)<br>`;
+                
+            } else if (contador > 4 && contador <= 6) {
+
+                msg.innerHTML += `${contador} anos (Pré-escolar)<br>`;
+                
+            } else if (contador > 6 && contador <= 10) {
+
+                msg.innerHTML += `${contador} anos (Segunda Infância)<br>`;
+                
+            } else if (contador > 10 &&contador <= 18) {
+
+                msg.innerHTML += `${contador} anos (Adolescência)<br>`;
+                
+            } else if (contador > 18 && contador <= 50) {
+
+                msg.innerHTML += `${contador} anos (Adulto)<br>`;
+                
+            } else if (contador > 50 && contador <= 100) {
+
+                msg.innerHTML += `${contador} anos (Melhor idade)<br>`;
+                
+            } else if (contador > 100) {
+
+                msg.innerHTML += `${contador} anor (Matusalém)<br>`;
+                
+            }   
+            
+        }   
+
+    }
+
+
+</script>
